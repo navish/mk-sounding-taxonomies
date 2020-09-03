@@ -27,8 +27,18 @@ function mksounding_register_taxonomy_facility()
         'labels'            => $labels,
         'show_ui'           => true,
         'show_admin_column' => true,
+        'show_in_menu' => true,
+        'show_in_ui' => true,
+        'show_in_nav_menus' => true,
+        'show_in_admin_bar' => true,
+        'show_in_rest' => true,
+        'show_in_quick_edit' => true,
         'query_var'         => true,
         'rewrite'           => ['slug' => 'facility-types'],
+        'can_export' => true,
+        'capability_type' => 'post',
+        'supports' => array('title', 'editor', 'comments', 'revisions', 'trackbacks', 'author', 'excerpt', 'page-attributes', 'thumbnail', 'custom-fields', 'post-formats'),
+        'public' => true,
     ];
     register_taxonomy('Facility', ['projects'], $args);
 }
